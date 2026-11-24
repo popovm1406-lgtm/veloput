@@ -1,0 +1,815 @@
+/* Общий файл стилей для всех трёх страниц.
+   Палитра: тёмно-зелёный #26423a, песочный #e7dfd0,
+   кирпичный #b05a32, фон #f6f3ed. */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f6f3ed;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #26423a;
+    text-decoration: none;
+    border-bottom: 1px solid #b9c3bc;
+}
+
+a:hover {
+    color: #b05a32;
+    border-bottom-color: #b05a32;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Шапка: логотип, меню и подпись автора */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #ded6c8;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border-bottom: 0;
+}
+
+.logo:hover {
+    border-bottom: 0;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+}
+
+.logo-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.05;
+    color: #26423a;
+}
+
+.logo-text small {
+    display: block;
+    margin-top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #7a857d;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.main-nav a {
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #536158;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #26423a;
+    border-bottom-color: #b05a32;
+}
+
+.author-badge {
+    font-size: 11px;
+    line-height: 1.45;
+    color: #7a857d;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Первый экран */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 62px 0 58px;
+}
+
+.kicker {
+    margin: 0 0 10px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b05a32;
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    line-height: 1.08;
+    color: #26423a;
+}
+
+.lead {
+    max-width: 530px;
+    margin: 0 0 26px;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #4b544e;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #26423a;
+    background: #26423a;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #b05a32;
+    border-color: #b05a32;
+    color: #fff;
+}
+
+.hero-figure {
+    margin: 0;
+}
+
+.hero-figure img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #d8cfbf;
+}
+
+.hero-figure figcaption,
+.about-photo figcaption,
+.photo-wide figcaption,
+.gear-photo figcaption,
+.gear-split figcaption {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #8a8f89;
+}
+
+/* Общие секции */
+.section {
+    padding: 54px 0;
+}
+
+.section + .section {
+    border-top: 1px solid #ded6c8;
+}
+
+.section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #26423a;
+}
+
+.section-head > a {
+    border-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Карточки маршрутов. Тень пробовал, но с ней блоки выглядят тяжело */
+.route-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.route-card {
+    padding: 24px 22px 22px;
+    background: #fff;
+    border: 1px solid #ded6c8;
+    border-top: 3px solid #26423a;
+}
+
+.route-card:nth-child(2) {
+    border-top-color: #b05a32;
+}
+
+.route-card:nth-child(3) {
+    border-top-color: #8a9b8e;
+}
+
+.route-num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #b05a32;
+}
+
+.route-card h3 {
+    margin: 8px 0 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #26423a;
+}
+
+.route-card p {
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.route-card .route-meta {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #6f7a72;
+}
+
+.route-card > a {
+    border-bottom: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Блок «как всё начиналось» */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+    align-items: center;
+}
+
+.about-photo {
+    margin: 0;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border: 1px solid #d8cfbf;
+}
+
+.about-text h2 {
+    margin-bottom: 14px;
+}
+
+.about-text p {
+    font-size: 15.5px;
+    line-height: 1.65;
+}
+
+/* Тёмный блок с ближайшим выездом */
+.callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 34px;
+    background: #26423a;
+    color: #eef2ee;
+}
+
+.callout h2 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.callout p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d9e1db;
+}
+
+.callout .date {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    color: #e7c9a8;
+    white-space: nowrap;
+}
+
+/* Заголовки внутренних страниц */
+.page-head {
+    padding: 46px 0 30px;
+}
+
+.page-head h1 {
+    margin: 8px 0 14px;
+    font-size: 40px;
+}
+
+.page-head .lead {
+    margin-bottom: 0;
+    max-width: 760px;
+}
+
+/* Таблицы */
+.table-wrap {
+    margin-top: 6px;
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #ded6c8;
+}
+
+table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 18px 20px 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    color: #26423a;
+    text-align: left;
+}
+
+thead th {
+    padding: 12px 14px;
+    background: #26423a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+}
+
+tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #e8e1d4;
+    font-size: 14.5px;
+    vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+    background: #faf8f3;
+}
+
+tbody tr:hover {
+    background: #f1ece1;
+}
+
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+td.num {
+    width: 44px;
+    color: #8a8f89;
+}
+
+.level {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.level-low {
+    background: #e2ebe4;
+    color: #2f5c42;
+}
+
+.level-mid {
+    background: #f3e8d7;
+    color: #8a5a21;
+}
+
+.level-high {
+    background: #f0ddd6;
+    color: #8b3a24;
+}
+
+.table-note {
+    margin: 10px 0 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: #7a857d;
+}
+
+.subhead {
+    margin: 42px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    color: #26423a;
+}
+
+.section-note {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: #6f7a72;
+}
+
+.section-note.top-gap {
+    margin-top: 18px;
+}
+
+.photo-wide {
+    margin: 34px 0 0;
+}
+
+.photo-wide img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border: 1px solid #d8cfbf;
+}
+
+/* Страница со снаряжением */
+.gear-head {
+    text-align: center;
+}
+
+.gear-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 42px;
+    align-items: start;
+}
+
+/* Блок с прокруткой из задания. Высоту уменьшил до 250 px,
+   ширину поставил 100%, чтобы не было пустой колонки справа */
+.layer {
+    width: 100%;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 16px 22px;
+    background: #f3efe6;
+    border: 1px solid #cfc5b4;
+}
+
+.layer ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.layer li {
+    margin-bottom: 8px;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+.layer li:last-child {
+    margin-bottom: 0;
+}
+
+.layer-hint {
+    margin: 8px 0 18px;
+    font-size: 12px;
+    color: #8a8f89;
+}
+
+.gear-photo {
+    margin: 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ded6c8;
+}
+
+.gear-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.gear-photo figcaption {
+    margin-top: 10px;
+}
+
+/* Классы textstyle0–textstyle4 из задания.
+   Цвета и размеры подогнал под общий стиль сайта */
+.textstyle0 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 230%;
+    font-weight: bold;
+    line-height: 1.15;
+    text-align: center;
+    color: #26423a;
+}
+
+.textstyle1 {
+    max-width: 780px;
+    margin: 0 auto 30px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 125%;
+    font-style: italic;
+    line-height: 1.55;
+    text-align: center;
+    color: #5b6b62;
+}
+
+.textstyle2 {
+    margin: 18px 0 0;
+    padding: 14px 18px;
+    background: #f0e9dd;
+    border-left: 3px solid #b05a32;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 115%;
+    font-style: italic;
+    line-height: 1.55;
+    color: #8c4a2e;
+}
+
+.textstyle3 {
+    margin: 0 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 115%;
+    font-weight: bold;
+    line-height: 1.35;
+    text-align: left;
+    color: #26423a;
+}
+
+.textstyle4 {
+    margin: 0 0 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 1.65;
+    text-align: justify;
+    color: #333;
+}
+
+.rules {
+    margin: 14px 0 0;
+    padding-left: 24px;
+}
+
+.rules li {
+    margin-bottom: 18px;
+    padding-left: 4px;
+}
+
+.rules li:last-child {
+    margin-bottom: 0;
+}
+
+.rules .textstyle3 {
+    margin-bottom: 5px;
+}
+
+.rules .textstyle4 {
+    margin-bottom: 0;
+}
+
+.gear-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.gear-split figure {
+    margin: 0;
+}
+
+.gear-split img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border: 1px solid #d8cfbf;
+}
+
+/* Вывод по работе */
+.conclusion {
+    margin-top: 20px;
+    padding: 28px 32px;
+    background: #fff;
+    border: 1px solid #ded6c8;
+    border-left: 4px solid #b05a32;
+}
+
+.conclusion h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.conclusion p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+/* Подвал */
+.site-footer {
+    margin-top: 68px;
+    padding: 44px 0 20px;
+    background: #26423a;
+    color: #d9e1db;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+}
+
+.footer-title {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.site-footer p {
+    font-size: 13.5px;
+    line-height: 1.7;
+}
+
+.site-footer a {
+    color: #eef2ee;
+    border-bottom-color: #6f8578;
+}
+
+.site-footer a:hover {
+    color: #e7c9a8;
+    border-bottom-color: #e7c9a8;
+}
+
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer li {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+}
+
+.credits {
+    margin: 22px 0 0;
+    font-size: 11px !important;
+    line-height: 1.6;
+    color: #aebdb3;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 26px;
+    padding-top: 16px;
+    border-top: 1px solid #3d574c;
+    font-size: 11px;
+    color: #aebdb3;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 11px;
+}
+
+/* Планшет */
+@media (max-width: 920px) {
+    .hero,
+    .split,
+    .gear-layout,
+    .gear-split,
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        gap: 28px;
+        padding: 40px 0;
+    }
+
+    .hero-figure img {
+        height: 320px;
+    }
+
+    .route-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .author-badge {
+        display: none;
+    }
+
+    .about-photo img {
+        height: 300px;
+    }
+
+    .gear-layout {
+        gap: 30px;
+    }
+}
+
+/* Телефон. Меню переносится под логотип */
+@media (max-width: 680px) {
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 4px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .page-head h1 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 38px 0;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .callout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 24px;
+    }
+
+    .photo-wide img {
+        height: 230px;
+    }
+
+    .textstyle0 {
+        font-size: 190%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+    }
+}

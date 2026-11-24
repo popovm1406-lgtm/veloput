@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Маршруты по Краснодару и краю — ВелоПуть | Попов М. В., 26-ЗиК-01</title>
+    <meta name="description" content="Маршруты выходного дня по Краснодару и краю: дистанция, набор высоты, время и покрытие. Личный проект Попова Максима, группа 26-ЗиК-01.">
+    <link rel="icon" href="emblem.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrapper header-inner">
+        <a class="logo" href="index.html">
+            <img src="emblem.svg" alt="Знак ВелоПуть" width="42" height="42">
+            <span class="logo-text">ВелоПуть<small>маршруты выходного дня</small></span>
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">Главная</a>
+            <a class="active" href="index01.html">Маршруты</a>
+            <a href="index02.html">Снаряжение</a>
+        </nav>
+        <div class="author-badge">Попов М. В.<br>группа 26-ЗиК-01</div>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+
+        <section class="page-head">
+            <p class="kicker">Маршруты · 2024–2026</p>
+            <h1>Куда я езжу</h1>
+            <p class="lead">Шесть маршрутов по Краснодару и краю, которые проехал за последние два сезона. Время указано с остановками и без соревновательного темпа. Набор высоты считал по трекеру, поэтому цифры примерные.</p>
+        </section>
+
+        <!-- В таблицу добавил столбцы «Набор высоты» и «Покрытие»: по ним проще выбрать маршрут -->
+        <div class="table-wrap">
+            <table>
+                <caption>Таблица 1. Маршруты выходного дня</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Маршрут</th>
+                        <th scope="col">Дистанция</th>
+                        <th scope="col">Набор высоты</th>
+                        <th scope="col">Время</th>
+                        <th scope="col">Сложность</th>
+                        <th scope="col">Покрытие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="route1">
+                        <td class="num">1</td>
+                        <td><strong>Кубанское кольцо</strong></td>
+                        <td>32 км</td>
+                        <td>240 м</td>
+                        <td>2 ч 10 мин</td>
+                        <td><span class="level level-low">низкая</span></td>
+                        <td>асфальт, набережная</td>
+                    </tr>
+                    <tr id="route2">
+                        <td class="num">2</td>
+                        <td><strong>Петля у водохранилища</strong></td>
+                        <td>48 км</td>
+                        <td>310 м</td>
+                        <td>3 ч 20 мин</td>
+                        <td><span class="level level-mid">средняя</span></td>
+                        <td>асфальт, гравий</td>
+                    </tr>
+                    <tr id="route3">
+                        <td class="num">3</td>
+                        <td><strong>Дачи под Афипским</strong></td>
+                        <td>27 км</td>
+                        <td>180 м</td>
+                        <td>1 ч 50 мин</td>
+                        <td><span class="level level-low">низкая</span></td>
+                        <td>асфальт</td>
+                    </tr>
+                    <tr>
+                        <td class="num">4</td>
+                        <td><strong>Гряда за Горячим Ключом</strong></td>
+                        <td>64 км</td>
+                        <td>620 м</td>
+                        <td>4 ч 40 мин</td>
+                        <td><span class="level level-high">высокая</span></td>
+                        <td>грунт, камни</td>
+                    </tr>
+                    <tr>
+                        <td class="num">5</td>
+                        <td><strong>Полевой круг за Убинской</strong></td>
+                        <td>41 км</td>
+                        <td>150 м</td>
+                        <td>2 ч 30 мин</td>
+                        <td><span class="level level-mid">средняя</span></td>
+                        <td>гравий, поле</td>
+                    </tr>
+                    <tr>
+                        <td class="num">6</td>
+                        <td><strong>Ночной Краснодар</strong></td>
+                        <td>22 км</td>
+                        <td>90 м</td>
+                        <td>1 ч 15 мин</td>
+                        <td><span class="level level-low">низкая</span></td>
+                        <td>асфальт</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="table-note">Сложность: низкая — можно с новичком; средняя — нужен опыт и запас воды; высокая — лучше ехать в компании и брать ремнабор.</p>
+
+        <figure class="photo-wide">
+            <img src="route.jpg" alt="Скала над рекой Псекупс в Горячем Ключе">
+            <figcaption>Река Псекупс под Горячим Ключом. Фото: Wikimedia Commons, CC BY-SA 3.0</figcaption>
+        </figure>
+
+        <h2 class="subhead">Планы на сезон</h2>
+        <p class="section-note">Отдельная таблица, чтобы не забыть, что хотел попробовать в этом году.</p>
+
+        <!-- Вторую таблицу сделал для планов, иначе страница была бы только про прошлые поездки -->
+        <div class="table-wrap">
+            <table>
+                <caption>Таблица 2. Что хочу проехать в этом сезоне</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Месяц</th>
+                        <th scope="col">Маршрут</th>
+                        <th scope="col">Цель</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Апрель</td>
+                        <td>Кубанское кольцо</td>
+                        <td>открыть сезон без спешки</td>
+                    </tr>
+                    <tr>
+                        <td>Май</td>
+                        <td>Петля у водохранилища</td>
+                        <td>проехать без длинных остановок</td>
+                    </tr>
+                    <tr>
+                        <td>Июнь</td>
+                        <td>Гряда за Горячим Ключом</td>
+                        <td>первый раз больше 60 км</td>
+                    </tr>
+                    <tr>
+                        <td>Август</td>
+                        <td>Ночной Краснодар</td>
+                        <td>проехать по пустым улицам</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="section-note top-gap">Если решите повторить какой-то маршрут, сначала посмотрите погоду и состояние грунта. После сильного дождя «Гряда за Горячим Ключом» превращается в кашу — я один раз сунулся и полтора часа толкал велосипед. Лучше неделю подождать.</p>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrapper">
+        <div class="footer-main">
+            <div>
+                <p class="footer-title">ВелоПуть</p>
+                <p>Учебный проект по HTML и CSS.<br>Попов Максим Витальевич, группа 26-ЗиК-01.<br>Краснодар, 2026 год.</p>
+                <p>Сайт про поездки выходного дня по Краснодару и краю: три страницы, общий файл стилей и немного личного опыта.</p>
+            </div>
+            <div>
+                <p class="footer-title">Полезные ссылки</p>
+                <ul>
+                    <li><a href="https://ru.wikipedia.org/wiki/Велосипедный_туризм" target="_blank" rel="noopener">Велосипедный туризм — Википедия</a></li>
+                    <li><a href="https://fvsr.ru/" target="_blank" rel="noopener">Федерация велосипедного спорта России</a></li>
+                    <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap — карты для маршрутов</a></li>
+                    <li><a href="https://www.strava.com/" target="_blank" rel="noopener">Strava — треки и статистика</a></li>
+                    <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Фотографии — Wikimedia Commons</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="credits">Фотографии: Антон Зайцев (CC BY-SA 3.0), Andrey Butko (CC BY-SA 4.0), Yuriy75 (CC BY-SA 3.0), Gengiskanhg (CC BY-SA 3.0), Htcltd (CC BY-SA 4.0). Исходные файлы — на Wikimedia Commons.</p>
+
+        <div class="footer-bottom">
+            <p>© 2026 Попов М. В., 26-ЗиК-01</p>
+            <p>Практическая и самостоятельная работа по CSS</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
